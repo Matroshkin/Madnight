@@ -174,7 +174,11 @@ ModelImporter:
     optimizeGameObjects: 0
     motionNodeName: 
     animationImportErrors: 
-    animationImportWarnings: 
+    animationImportWarnings: "Copied Avatar Rig Configuration mis-match. Errors found
+      in old project file will be treated as a warnings. Configuration mis-match will
+      be ignored, but current Configuration needs to be fixed:\n\tTransform 'Pivot'
+      not found in HumanDescription.\nCopied Avatar Rig Configuration mis-match. Bone
+      length in copied configuration does not match position in animation file\nIdle_Neutral_2"
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     animationCompression: 1
@@ -187,7 +191,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Idle_Neutral_2
       takeName: _87_a_U1_M_P_idle_Neutral__Fb_p0_No_1
-      firstFrame: 120
+      firstFrame: 340
       lastFrame: 1100
       wrapMode: 0
       orientationOffsetY: 0
