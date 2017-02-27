@@ -8,14 +8,16 @@ public class DoorOpen : MonoBehaviour {
     public float doorOpenAngle = 90f;
     public float doorCloseAngle = 0f;
     public float smooth = 2f;
+    public bool allowToOpen = true;
+    private AudioSource audio;
 	// Use this for initialization
 	void Start () {
-		
+        audio = GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if(open)
+		if((open) & (allowToOpen))
         {
             Quaternion targetRotation = Quaternion.Euler(0, doorOpenAngle, 0);
             transform.localRotation = Quaternion.Slerp(transform.localRotation, targetRotation, smooth * Time.deltaTime);
@@ -30,6 +32,7 @@ public class DoorOpen : MonoBehaviour {
     public void ChangeDoorState()
     {
         open = !open;
+        audio.Play();
     }
 
     private void OnMouseDown()
